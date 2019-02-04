@@ -7,19 +7,19 @@ public class PokedexFrame extends JFrame
 {
 
 	private PokedexController app;
-	private PokedexPanel appPanel;
+	private PokedexPanel panel;
 	
 	public PokedexFrame(PokedexController app)
 	{
 		super();
 		this.app = app;
-		this.appPanel = new PokedexPanel(app);
+		this.panel = new PokedexPanel(app);
 		setupFrame();
 	}
 	
 	private void setupFrame()
 	{
-		this.setContentPane(appPanel);
+		this.setContentPane(panel);
 		
 		this.setSize(800, 600);
 		this.setTitle("Pokedex");

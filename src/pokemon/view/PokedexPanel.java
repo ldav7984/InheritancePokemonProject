@@ -13,17 +13,19 @@ public class PokedexPanel extends JPanel
 	private SpringLayout appLayout;
 	private PokedexController appController;
 	
-	private JTextField kyogreText;
-	private JTextField vaporeonText;
-	private JTextField espurrText;
-	private JTextField gardevoirText;
-	private JTextField mimikyuText;
+	private JTextField healthPointsText;
+	private JTextField attackPointsText;
+	private JTextField enhancementModifierText;
+	private JTextField numberText;
+	private JTextField nameText;
+	private JTextField canEvolveText;
 	
-	private JLabel kyogreLabel;
-	private JLabel vaporeonLabel;
-	private JLabel espurrLabel;
-	private JLabel gardevoirLabel;
-	private JLabel mimikyuLabel;
+	private JLabel healthPointsLabel;
+	private JLabel attackPointsLabel;
+	private JLabel enhancementModifierLabel;
+	private JLabel numberLabel;
+	private JLabel nameLabel;
+	private JLabel canEvolveLabel;
 	
 	public PokedexPanel(PokedexController app)
 	{
@@ -41,17 +43,19 @@ public class PokedexPanel extends JPanel
 		this.setLayout(appLayout);
 		this.setBackground(Color.BLUE);
 		
-		this.add(kyogreText);
-		this.add(vaporeonText);
-		this.add(espurrText);
-		this.add(gardevoirText);
-		this.add(mimikyuText);
+		this.add(healthPointsText);
+		this.add(attackPointsText);
+		this.add(enhancementModifierText);
+		this.add(numberText);
+		this.add(nameText);
+		this.add(canEvolveText);
 		
-		this.add(kyogreLabel);
-		this.add(vaporeonLabel);
-		this.add(espurrLabel);
-		this.add(gardevoirLabel);
-		this.add(mimikyuLabel);
+		this.add(healthPointsLabel);
+		this.add(attackPointsLabel);
+		this.add(enhancementModifierLabel);
+		this.add(numberLabel);
+		this.add(nameLabel);
+		this.add(canEvolveLabel);
 	}
 	
 	private void setupLayout()
