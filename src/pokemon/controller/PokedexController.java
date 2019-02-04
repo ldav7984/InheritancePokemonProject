@@ -22,11 +22,11 @@ public class PokedexController
 	
 	public void addPokemon()
 	{
-		//pokemonList.add(new Kyogre());
-		//pokemonList.add(new Vaporeon());
-		//pokemonList.add(new Espurr());
-		//pokemonList.add(new Gardevoir());
-		//pokemonList.add(new Mimikyu());
+		pokemonList.add(new Kyogre(45, "Kyogre"));
+		pokemonList.add(new Vaporeon(134, "Juvia"));
+		pokemonList.add(new Espurr(114, "Breathing In The Cheamicals"));
+		pokemonList.add(new Gardevoir(282, "Wally"));
+		pokemonList.add(new Mimikyu(778, "My sweet tragic friend"));
 	}
 
 	public void start()
