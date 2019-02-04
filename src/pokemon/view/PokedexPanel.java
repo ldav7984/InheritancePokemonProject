@@ -33,6 +33,18 @@ public class PokedexPanel extends JPanel
 		this.appController = app;
 		appLayout = new SpringLayout();
 		
+		healthPointsText = new JTextField("", 50);
+		attackPointsText = new JTextField("", 50);
+		
+		enhancementModifierText = new JTextField("", 50);
+		
+		numberText = new JTextField("", 50);
+		nameText = new JTextField("", 50);
+		numberText = new JTextField("", 50);
+		canEvolveText = new JTextField("", 50);
+		nameText = new JTextField("", 50);
+		canEvolveText = new JTextField("", 50);
+		
 		setupPanel();
 		setupLayout();
 		//setupListeners();
@@ -41,6 +53,7 @@ public class PokedexPanel extends JPanel
 	private void setupPanel()
 	{
 		this.setLayout(appLayout);
+		this.setPreferredSize(new Dimension(800, 600));
 		this.setBackground(Color.BLUE);
 		
 		this.add(healthPointsText);
@@ -60,6 +73,26 @@ public class PokedexPanel extends JPanel
 	
 	private void setupLayout()
 	{
+		appLayout.putConstraint(SpringLayout.NORTH, attackPointsText, 153, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.WEST, attackPointsText, 22, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.WEST, healthPointsText, 0, SpringLayout.WEST, attackPointsText);
+		appLayout.putConstraint(SpringLayout.SOUTH, healthPointsText, -6, SpringLayout.NORTH, attackPointsText);
+		appLayout.putConstraint(SpringLayout.NORTH, enhancementModifierText, 16, SpringLayout.SOUTH, attackPointsText);
+		appLayout.putConstraint(SpringLayout.WEST, enhancementModifierText, 22, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.WEST, numberText, 0, SpringLayout.WEST, healthPointsText);
+		appLayout.putConstraint(SpringLayout.SOUTH, numberText, -6, SpringLayout.NORTH, healthPointsText);
+		appLayout.putConstraint(SpringLayout.SOUTH, nameText, -6, SpringLayout.NORTH, numberText);
+		appLayout.putConstraint(SpringLayout.EAST, nameText, 0, SpringLayout.EAST, healthPointsText);
+		appLayout.putConstraint(SpringLayout.NORTH, canEvolveText, 11, SpringLayout.SOUTH, enhancementModifierText);
+		appLayout.putConstraint(SpringLayout.WEST, canEvolveText, 0, SpringLayout.WEST, healthPointsText);
+		appLayout.putConstraint(SpringLayout.WEST, numberText, 0, SpringLayout.WEST, healthPointsText);
+		appLayout.putConstraint(SpringLayout.SOUTH, numberText, -6, SpringLayout.NORTH, healthPointsText);
+		appLayout.putConstraint(SpringLayout.NORTH, enhancementModifierText, 16, SpringLayout.SOUTH, attackPointsText);
+		appLayout.putConstraint(SpringLayout.WEST, enhancementModifierText, 22, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, nameText, -6, SpringLayout.NORTH, numberText);
+		appLayout.putConstraint(SpringLayout.EAST, nameText, 0, SpringLayout.EAST, healthPointsText);
+		appLayout.putConstraint(SpringLayout.NORTH, canEvolveText, 11, SpringLayout.SOUTH, enhancementModifierText);
+		appLayout.putConstraint(SpringLayout.WEST, canEvolveText, 0, SpringLayout.WEST, healthPointsText);
 		
 	}
 	
