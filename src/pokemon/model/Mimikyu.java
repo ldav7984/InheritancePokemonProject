@@ -1,0 +1,33 @@
+package pokemon.model;
+
+public class Mimikyu extends Pokemon implements Fairy, Ghost
+{
+	public Mimikyu(int number, String name)
+	{
+		super(number, name);
+	}
+	
+	public String dazzlingGleam()
+	{
+		String statement = "";
+		return statement;
+	}
+	
+	public void moonBlast()
+	{
+		System.out.println("You are blasted with the light of the moon.");
+	}
+	
+	public void curse()
+	{
+		System.out.println("Mimikyu curses you, your family, and your cow.");
+	}
+	
+	public void shadowBall()
+	{
+		System.out.println("Mimikyu has totally ruined you with this overpowered move!");
+	}
+	
+	
+	
+}
