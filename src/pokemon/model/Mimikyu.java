@@ -23,9 +23,10 @@ public class Mimikyu extends Pokemon implements Fairy, Ghost
 		System.out.println("Mimikyu curses you, your family, and your cow.");
 	}
 	
-	public void shadowBall()
+	public String shadowBall()
 	{
-		System.out.println("Mimikyu has totally ruined you with this overpowered move!");
+		String statement = "Mimikyu has totally ruined you with this overpowered move!";
+		return statement;
 	}
 	
 	
