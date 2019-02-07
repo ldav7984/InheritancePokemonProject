@@ -3,11 +3,13 @@ package pokemon.controller;
 import javax.swing.JOptionPane;
 
 import java.util.ArrayList;
-import pokemon.view.PokedexFrame;
 import pokemon.model.*;
+import pokemon.view.PokedexFrame;
+import pokemon.view.PokedexPanel;
 
 public class PokedexController 
 {
+	//private Pokemon myPokemon;
 	private ArrayList<Pokemon> pokemonList;
 	private PokedexFrame appFrame;
 	

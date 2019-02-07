@@ -5,7 +5,6 @@ import pokemon.controller.PokedexController;
 
 public class PokedexFrame extends JFrame
 {
-
 	private PokedexController app;
 	private PokedexPanel panel;
 	
