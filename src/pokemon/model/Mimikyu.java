@@ -15,7 +15,7 @@ public class Mimikyu extends Pokemon implements Fairy, Ghost
 	
 	public void moonBlast()
 	{
-		System.out.println("You are blasted with the light of the moon.");
+		System.out.println("You are blasted with the light of the spooky moon.");
 	}
 	
 	public void curse()

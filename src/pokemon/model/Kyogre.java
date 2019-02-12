@@ -9,7 +9,7 @@ public class Kyogre extends Pokemon implements Water
 	
 	public String splash()
 	{
-		String statement = "Kyogre used Splash! Kyogre's primal form has covered the world with water.";
+		String statement = "Kyogre used Splash! Kyogre's primal form has covered the world with water. Team Aqua has won.";
 		
 		return statement;
 	}

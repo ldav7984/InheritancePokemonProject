@@ -24,11 +24,11 @@ public class PokedexController
 	
 	public void addPokemon()
 	{
-		pokemonList.add(new Kyogre(45, "Kyogre"));
+		pokemonList.add(new Kyogre(45, "Primal Boi"));
 		pokemonList.add(new Vaporeon(134, "Juvia"));
-		pokemonList.add(new Espurr(114, "Breathing In The Cheamicals"));
+		pokemonList.add(new Espurr(114, "Cheamicals"));
 		pokemonList.add(new Gardevoir(282, "Wally"));
-		pokemonList.add(new Mimikyu(778, "My sweet tragic friend"));
+		pokemonList.add(new Mimikyu(778, "Spooky"));
 	}
 
 	public void start()
@@ -49,6 +49,29 @@ public class PokedexController
 	public PokedexFrame getFrame()
 	{
 		return appFrame;
+	}
+	
+	public void updatePokemon(int index, String [] data)
+	{
+		if(data.length == 5)
+		{
+			Pokemon current = pokemonList.get(index);
+			current.setAttackPoints(Integer.parseInt(data[0]));
+			current.setEnhancementModifier(Double.parseDouble(data[1]));
+			current.setHealthPoints(Integer.parseInt(data[2]));
+			current.setName(data[3]);
+			current.setCanEvolve(Boolean.parseBoolean(data[4]));
+		}
+	}
+	
+	public String[] buildPokedexText()
+	{
+		String [] names = new String [pokemonList.size()];
+		for(int index = 0; index < pokemonList.size(); index++)
+		{
+			names[index] = pokemonList.get(index).getName();
+		}
+		return names;
 	}
 	
 	public boolean isDouble(String maybeDouble)
@@ -80,6 +103,8 @@ public class PokedexController
 		}
 		return isValid;
 	}
+	
+	
 	
 	
 }

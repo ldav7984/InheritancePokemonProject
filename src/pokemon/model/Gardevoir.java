@@ -9,8 +9,8 @@ public class Gardevoir extends Pokemon implements Psychic, Fairy
 	
 	public int zenHeadbutt()
 	{
-		int timesHeadbutts = 1;
-		return timesHeadbutts;
+		int times = 1;
+		return times;
 	}
 
 	public String rest()
