@@ -9,7 +9,6 @@ import pokemon.view.PokedexPanel;
 
 public class PokedexController 
 {
-	//private Pokemon myPokemon;
 	private ArrayList<Pokemon> pokemonList;
 	private PokedexFrame appFrame;
 	
@@ -20,15 +19,13 @@ public class PokedexController
 		appFrame = new PokedexFrame(this);
 	}
 	
-	
-	
 	public void addPokemon()
 	{
 		pokemonList.add(new Kyogre(45, "Primal Boi"));
 		pokemonList.add(new Vaporeon(134, "Juvia"));
 		pokemonList.add(new Espurr(114, "Cheamicals"));
 		pokemonList.add(new Gardevoir(282, "Wally"));
-		pokemonList.add(new Mimikyu(778, "Spooky"));
+		pokemonList.add(new Mimikyu(778, "Precious Spooky"));
 	}
 
 	public void start()
@@ -40,11 +37,6 @@ public class PokedexController
 	{
 		return pokemonList;
 	}
-	
-	//public Pokemon getPokemon()
-	//{
-	//	return myPokemon;
-	//}
 	
 	public PokedexFrame getFrame()
 	{
