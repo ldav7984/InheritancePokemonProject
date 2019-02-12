@@ -13,37 +13,42 @@ public class PokedexPanel extends JPanel
 	private SpringLayout appLayout;
 	private PokedexController appController;
 	
-	private JTextField healthPointsText;
-	private JTextField attackPointsText;
-	private JTextField enhancementModifierText;
-	private JTextField numberText;
-	private JTextField nameText;
-	private JTextField canEvolveText;
+	private JButton changeButton;
+	private JComboBox pokedexDropdown;
 	
-	private JLabel healthPointsLabel;
-	private JLabel attackPointsLabel;
-	private JLabel enhancementModifierLabel;
+	private JTextField healthField;
+	private JTextField attackField;
+	private JTextField enhancementField;
+	private JTextField numberField;
+	private JTextField nameField;
+	private JTextField evolveField;
+	
+	private JLabel healthLabel;
+	private JLabel attackLabel;
+	private JLabel enhancementLabel;
 	private JLabel numberLabel;
 	private JLabel nameLabel;
-	private JLabel canEvolveLabel;
+	private JLabel evolveLabel;
 	
 	public PokedexPanel(PokedexController app)
 	{
 		super();
 		this.appController = app;
-		appLayout = new SpringLayout();
+		this.appLayout = new SpringLayout();
 		
-		healthPointsText = new JTextField("", 50);
-		attackPointsText = new JTextField("", 50);
+		healthField = new JTextField("0");
+		attackField = new JTextField("0");
+		enhancementField = new JTextField("0");
+		numberField = new JTextField("0");
+		nameField = new JTextField("");
+		evolveField = new JTextField("false");
 		
-		enhancementModifierText = new JTextField("", 50);
-		
-		numberText = new JTextField("", 50);
-		nameText = new JTextField("", 50);
-		numberText = new JTextField("", 50);
-		canEvolveText = new JTextField("", 50);
-		nameText = new JTextField("", 50);
-		canEvolveText = new JTextField("", 50);
+		healthLabel = new JLabel("Health Points");
+		attackLabel = new JLabel("Attack Points");
+		enhancementLabel = new JLabel("Enhancement Modifier");
+		numberLabel = new JLabel("Number");
+		nameLabel = new JLabel("Name");
+		evolveLabel = new JLabel("Can Evolve");
 		
 		setupPanel();
 		setupLayout();
@@ -56,19 +61,19 @@ public class PokedexPanel extends JPanel
 		this.setPreferredSize(new Dimension(800, 600));
 		this.setBackground(Color.BLUE);
 		
-		this.add(healthPointsText);
-		this.add(attackPointsText);
-		this.add(enhancementModifierText);
-		this.add(numberText);
-		this.add(nameText);
-		this.add(canEvolveText);
+		this.add(healthField);
+		this.add(attackField);
+		this.add(enhancementField);
+		this.add(numberField);
+		this.add(nameField);
+		this.add(evolveField);
 		
-		this.add(healthPointsLabel);
-		this.add(attackPointsLabel);
-		this.add(enhancementModifierLabel);
+		this.add(healthLabel);
+		this.add(attackLabel);
+		this.add(enhancementLabel);
 		this.add(numberLabel);
 		this.add(nameLabel);
-		this.add(canEvolveLabel);
+		this.add(evolveLabel);
 	}
 	
 	private void setupLayout()

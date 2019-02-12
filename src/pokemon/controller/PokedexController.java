@@ -41,6 +41,11 @@ public class PokedexController
 		return pokemonList;
 	}
 	
+	//public Pokemon getPokemon()
+	//{
+	//	return myPokemon;
+	//}
+	
 	public PokedexFrame getFrame()
 	{
 		return appFrame;
@@ -56,7 +61,7 @@ public class PokedexController
 		}
 		catch (NumberFormatException error) //if it can't parse, it allows user to try again
 		{
-			JOptionPane.showMessageDialog(null, "You need to type in a decimal number and not press cancel :)");
+			JOptionPane.showMessageDialog(null, "You need to type in a decimal number and not press cancel.)");
 		}
 		return isValid;
 	}
