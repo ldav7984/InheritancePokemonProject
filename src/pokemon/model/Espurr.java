@@ -31,7 +31,7 @@ public class Espurr extends Pokemon implements Psychic
 	
 	public int zenHeadbutt()
 	{
-		int times = 4;
+		int times = (int) (Math.random() * 5);
 		return times;
 	}
 	

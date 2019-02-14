@@ -31,7 +31,7 @@ public class Gardevoir extends Pokemon implements Psychic, Fairy
 	
 	public int zenHeadbutt()
 	{
-		int times = 1;
+		int times = (int) (Math.random() * 4);
 		return times;
 	}
 
@@ -45,7 +45,6 @@ public class Gardevoir extends Pokemon implements Psychic, Fairy
 	{
 		String statement = "Gardevoir wowed its oppenent with its dazzling beauty.";
 		return statement;
-		
 	}
 	
 	public void moonBlast()
