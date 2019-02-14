@@ -5,16 +5,28 @@ public class Gardevoir extends Pokemon implements Psychic, Fairy
 	public Gardevoir()
 	{
 		super(282, "Gardevoir");
+		this.setHealthPoints(95);
+		this.setAttackPoints(18);
+		this.setEnhancementModifier(1.5);
+		this.setCanEvolve(true);
 	}
 	
 	public Gardevoir(String name)
 	{
 		super(282, name);
+		this.setHealthPoints(95);
+		this.setAttackPoints(18);
+		this.setEnhancementModifier(1.5);
+		this.setCanEvolve(true);
 	}
 	
 	public Gardevoir(int number, String name)
 	{
 		super(number, name);
+		this.setHealthPoints(95);
+		this.setAttackPoints(18);
+		this.setEnhancementModifier(1.5);
+		this.setCanEvolve(true);
 	}
 	
 	public int zenHeadbutt()

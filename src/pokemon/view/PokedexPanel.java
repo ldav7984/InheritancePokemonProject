@@ -40,7 +40,7 @@ public class PokedexPanel extends JPanel
 		this.app = app;
 		this.appLayout = new SpringLayout();
 		
-		this.pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/images/team mystic.png"));
+		this.pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/images/kyogre.png"));
 		
 		changeButton = new JButton("Change");
 		pokedexDropdown = new JComboBox<String>(); //stub
@@ -69,7 +69,7 @@ public class PokedexPanel extends JPanel
 		setupListeners();
 	}
 	
-	private void sentDataToController()
+	private void sendDataToController()
 	{
 		int index = pokedexDropdown.getSelectedIndex();
 		
@@ -77,12 +77,11 @@ public class PokedexPanel extends JPanel
 		{
 			String [] data = new String[5];
 			
-			data[0] = healthField.getText();
-			data[1] = attackField.getText();
-			data[2] = enhancementField.getText();
-			data[3] = numberField.getText();
-			data[4] = nameField.getText();
-			data[5] = evolveField.getText();
+			data[0] = attackField.getText();
+			data[1] = enhancementField.getText();
+			data[2] = healthField.getText();
+			data[3] = nameField.getText();
+			data[4] = evolveField.getText();
 			
 			app.updatePokemon(index, data);
 		}
@@ -91,7 +90,7 @@ public class PokedexPanel extends JPanel
 	private void changeImageDisplay(String name)
 	{
 		String path = "/pokemon/view/images/";
-		String defaultName = "team mystic";
+		String defaultName = "kyogre";
 		String extension = ".png";
 		try
 		{
@@ -188,9 +187,9 @@ public class PokedexPanel extends JPanel
 	{
 		changeButton.addActionListener(new ActionListener()
 		{
-			public void actionPerformed(ActionEvent mouseClick)
+			public void actionPerformed(ActionEvent click)
 			{
-				
+				sendDataToController();
 			}
 		});
 		

@@ -5,16 +5,28 @@ public class Mimikyu extends Pokemon implements Fairy, Ghost
 	public Mimikyu()
 	{
 		super(778, "Mimikyu");
+		this.setHealthPoints(80);
+		this.setAttackPoints(24);
+		this.setEnhancementModifier(1.8);
+		this.setCanEvolve(false);
 	}
 	
 	public Mimikyu(String name)
 	{
 		super(778, name);
+		this.setHealthPoints(80);
+		this.setAttackPoints(24);
+		this.setEnhancementModifier(1.8);
+		this.setCanEvolve(false);
 	}
 	
 	public Mimikyu(int number, String name)
 	{
 		super(number, name);
+		this.setHealthPoints(80);
+		this.setAttackPoints(24);
+		this.setEnhancementModifier(1.8);
+		this.setCanEvolve(false);
 	}
 	
 	public String dazzlingGleam()
