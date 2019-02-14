@@ -4,7 +4,7 @@ public class Espurr extends Pokemon implements Psychic
 {
 	public Espurr()
 	{
-		super(114, "Cheamicals");
+		super(114, "Espurr");
 	}
 	
 	public Espurr(String name)

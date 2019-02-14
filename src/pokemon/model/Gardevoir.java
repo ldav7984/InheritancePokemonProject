@@ -4,7 +4,7 @@ public class Gardevoir extends Pokemon implements Psychic, Fairy
 {
 	public Gardevoir()
 	{
-		super(282, "Wally");
+		super(282, "Gardevoir");
 	}
 	
 	public Gardevoir(String name)

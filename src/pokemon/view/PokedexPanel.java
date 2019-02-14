@@ -31,6 +31,7 @@ public class PokedexPanel extends JPanel
 	private JLabel evolveLabel;
 	
 	private JLabel imageLabel;
+	private ImageIcon pokemonIcon;
 	
 	public PokedexPanel(PokedexController app)
 	{
@@ -38,6 +39,8 @@ public class PokedexPanel extends JPanel
 	
 		this.app = app;
 		this.appLayout = new SpringLayout();
+		
+		this.pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/images/team mystic.png"));
 		
 		changeButton = new JButton("Change");
 		pokedexDropdown = new JComboBox<String>(); //stub
@@ -56,7 +59,8 @@ public class PokedexPanel extends JPanel
 		nameLabel = new JLabel("Name:");
 		evolveLabel = new JLabel("Can Evolve:");
 		
-		imageLabel = new JLabel("pokemon image");
+		imageLabel = new JLabel("pokemon image", pokemonIcon, JLabel.CENTER);
+		
 		
 		setupDropdown();
 		setupPanel();

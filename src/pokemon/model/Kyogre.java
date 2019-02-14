@@ -4,7 +4,7 @@ public class Kyogre extends Pokemon implements Water
 {
 	public Kyogre()
 	{
-		super(45, "Primal Boi");
+		super(45, "Kyogre");
 	}
 	
 	public Kyogre(String  name)

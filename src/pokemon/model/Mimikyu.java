@@ -4,7 +4,7 @@ public class Mimikyu extends Pokemon implements Fairy, Ghost
 {
 	public Mimikyu()
 	{
-		super(778, "Precious Spooky Boi");
+		super(778, "Mimikyu");
 	}
 	
 	public Mimikyu(String name)
