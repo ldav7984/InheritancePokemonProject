@@ -2,6 +2,16 @@ package pokemon.model;
 
 public class Vaporeon extends Pokemon implements Water
 {
+	public Vaporeon()
+	{
+		super(134, "Juvia");
+	}
+	
+	public Vaporeon(String name)
+	{
+		super(134, name);
+	}
+	
 	public Vaporeon(int number, String name)
 	{
 		super(number, name);

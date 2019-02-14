@@ -2,6 +2,16 @@ package pokemon.model;
 
 public class Mimikyu extends Pokemon implements Fairy, Ghost
 {
+	public Mimikyu()
+	{
+		super(778, "Precious Spooky Boi");
+	}
+	
+	public Mimikyu(String name)
+	{
+		super(778, name);
+	}
+	
 	public Mimikyu(int number, String name)
 	{
 		super(number, name);

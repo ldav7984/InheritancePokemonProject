@@ -2,9 +2,19 @@ package pokemon.model;
 
 public class Kyogre extends Pokemon implements Water
 {
-	public Kyogre(int number, String name)
+	public Kyogre()
 	{
-		super(number, name);
+		super(45, "Primal Boi");
+	}
+	
+	public Kyogre(String  name)
+	{
+		super(45, name);
+	}
+	
+	public Kyogre(int num, String name)
+	{
+		super(num, name);
 	}
 	
 	public String splash()

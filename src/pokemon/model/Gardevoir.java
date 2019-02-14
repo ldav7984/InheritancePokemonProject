@@ -2,6 +2,16 @@ package pokemon.model;
 
 public class Gardevoir extends Pokemon implements Psychic, Fairy
 {
+	public Gardevoir()
+	{
+		super(282, "Wally");
+	}
+	
+	public Gardevoir(String name)
+	{
+		super(282, name);
+	}
+	
 	public Gardevoir(int number, String name)
 	{
 		super(number, name);

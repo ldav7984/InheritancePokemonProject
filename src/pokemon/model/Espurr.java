@@ -2,6 +2,16 @@ package pokemon.model;
 
 public class Espurr extends Pokemon implements Psychic
 {
+	public Espurr()
+	{
+		super(114, "Cheamicals");
+	}
+	
+	public Espurr(String name)
+	{
+		super(114, name);
+	}
+	
 	public Espurr(int number, String name)
 	{
 		super(number, name);
