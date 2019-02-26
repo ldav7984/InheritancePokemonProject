@@ -24,6 +24,11 @@ public class PokedexController
 		appFrame = new PokedexFrame(this);
 	}
 	
+	public void start()
+	{
+		loadPokedex();
+	}
+	
 	private void addPokemon()
 	{
 		pokemonList.add(new Kyogre());
@@ -32,11 +37,6 @@ public class PokedexController
 		pokemonList.add(new Gardevoir());
 		pokemonList.add(new Mimikyu());
 		pokemonList.add(new Nabstablook());
-	}
-
-	public void start()
-	{
-		loadPokedex();
 	}
 	
 	public void savePokedex()
@@ -76,14 +76,17 @@ public class PokedexController
 		}
 	}
 	
-	public ArrayList<Pokemon> getPokemonList()
+	public String [] getPokeData(int index)
 	{
-		return pokemonList;
-	}
-	
-	public PokedexFrame getFrame()
-	{
-		return appFrame;
+		String [] data = new String [6];
+		Pokemon current = pokemonList.get(index);
+		data[0] = current.getAttackPoints() + "";
+		data[1] = current.getEnhancementModifier() + "";
+		data[2] = current.getHealthPoints() + "";
+		data[3]	= current.getName() + "";
+		data[4] = current.isCanEvolve() + "";
+		data[5] = current.getNumber() + "";
+		return data;
 	}
 	
 	public void updatePokemon(int index, String [] data)
@@ -97,19 +100,6 @@ public class PokedexController
 			current.setName(data[3]);
 			current.setCanEvolve(Boolean.parseBoolean(data[4]));
 		}
-	}
-	
-	public String [] getPokeData(int index)
-	{
-		String [] data = new String [6];
-		Pokemon current = pokemonList.get(index);
-		data[0] = current.getAttackPoints() + "";
-		data[1] = current.getEnhancementModifier() + "";
-		data[2] = current.getHealthPoints() + "";
-		data[3]	= current.getName() + "";
-		data[4] = current.isCanEvolve() + "";
-		data[5] = current.getNumber() + "";
-		return data;
 	}
 	
 	public String[] buildPokedexText()
@@ -152,7 +142,15 @@ public class PokedexController
 		return isValid;
 	}
 	
+	public ArrayList<Pokemon> getPokemonList()
+	{
+		return pokemonList;
+	}
 	
+	public PokedexFrame getFrame()
+	{
+		return appFrame;
+	}
 	
 	
 }
