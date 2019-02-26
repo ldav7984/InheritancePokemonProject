@@ -86,6 +86,7 @@ public class PokedexPanel extends JPanel
 			data[4] = evolveField.getText();
 			
 			app.updatePokemon(index, data);
+			repaint();
 		}
 	}
 	
@@ -118,6 +119,7 @@ public class PokedexPanel extends JPanel
 		this.setLayout(appLayout);
 		
 		this.add(changeButton);
+		this.add(saveButton);
 		this.add(pokedexDropdown);
 		
 		this.add(healthField);
@@ -192,6 +194,7 @@ public class PokedexPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				sendDataToController();
+				repaint();
 			}
 		});
 		pokedexDropdown.addActionListener(new ActionListener()

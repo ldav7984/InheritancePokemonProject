@@ -9,7 +9,7 @@ public class Nabstablook extends Pokemon implements Ghost
 	
 	public Nabstablook()
 	{
-		super(0, "");
+		super(0, "Nabstablook");
 	}
 	
 	public Nabstablook(String name)
