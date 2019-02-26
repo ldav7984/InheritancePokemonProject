@@ -3,27 +3,28 @@ package pokemon.controller;
 import javax.swing.JOptionPane;
 
 import java.util.ArrayList;
+import java.io.*;
+
 import pokemon.model.*;
 import pokemon.view.PokedexFrame;
-import pokemon.view.PokedexPanel;
+
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 public class PokedexController 
 {
 	private ArrayList<Pokemon> pokemonList;
 	private PokedexFrame appFrame;
-	private ImageIcon [] icons;
+	private String saveFile = "backup.pokemon";
 	
 	public PokedexController()
 	{
 		pokemonList = new ArrayList<Pokemon>();
 		addPokemon();
 		appFrame = new PokedexFrame(this);
-		icons = new ImageIcon[1];
-		icons[0] = new ImageIcon(getClass().getResource("/pokemon/view/images/team mystic.png"));
 	}
 	
-	public void addPokemon()
+	private void addPokemon()
 	{
 		pokemonList.add(new Kyogre());
 		pokemonList.add(new Vaporeon());
@@ -40,7 +41,18 @@ public class PokedexController
 	
 	public void savePokedex()
 	{
-		
+		try
+		{
+			FileOutputStream saveStream = new FileOutputStream(saveFile);
+			ObjectOutputStream output = new ObjectOutputStream(saveStream);
+			output.writeObject(pokemonList);
+			output.close();
+			saveStream.close();
+		}
+		catch(IOExeption error)
+		{
+			JOptionPane.showMessageDialog(appFrame, error.getMessage(), "File Error", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 	
 	public ArrayList<Pokemon> getPokemonList()

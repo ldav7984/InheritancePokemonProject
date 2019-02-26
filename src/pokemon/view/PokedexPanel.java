@@ -194,7 +194,6 @@ public class PokedexPanel extends JPanel
 				sendDataToController();
 			}
 		});
-		
 		pokedexDropdown.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent selection)
