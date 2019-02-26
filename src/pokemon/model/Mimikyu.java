@@ -1,48 +1,42 @@
 package pokemon.model;
 
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+
 public class Mimikyu extends Pokemon implements Fairy, Ghost
 {
+	private ImageIcon pokemonIcon;
 	public Mimikyu()
 	{
 		super(778, "Mimikyu");
-		this.setHealthPoints(80);
-		this.setAttackPoints(24);
-		this.setEnhancementModifier(1.8);
-		this.setCanEvolve(false);
 	}
 	
 	public Mimikyu(String name)
 	{
 		super(778, name);
-		this.setHealthPoints(80);
-		this.setAttackPoints(24);
-		this.setEnhancementModifier(1.8);
-		this.setCanEvolve(false);
 	}
 	
 	public Mimikyu(int number, String name)
 	{
 		super(number, name);
-		this.setHealthPoints(80);
-		this.setAttackPoints(24);
-		this.setEnhancementModifier(1.8);
-		this.setCanEvolve(false);
 	}
 	
 	public String dazzlingGleam()
 	{
-		String statement = "";
+		String statement = "You are dazzled with mimikyu's cuteness.";
 		return statement;
 	}
 	
 	public void moonBlast()
 	{
-		System.out.println("You are blasted with the light of the spooky moon.");
+		pokemonIcon = new ImageIcon(getClass().getResource("pokemon/view/images/mimikyu.png"));
+		JOptionPane.showMessageDialog(null, "", "Mimikyu blasts you with the light of the spooky moon.", JOptionPane.INFORMATION_MESSAGE, pokemonIcon);
 	}
 	
 	public void curse()
 	{
-		System.out.println("Mimikyu curses you, your family, and your cow.");
+		pokemonIcon = new ImageIcon(getClass().getResource("pokemon/view/images/mimikyu.png"));
+		JOptionPane.showMessageDialog(null, "", "Mimikyu curses you, your family, and your cow.", JOptionPane.INFORMATION_MESSAGE, pokemonIcon);
 	}
 	
 	public String shadowBall()

@@ -14,6 +14,7 @@ public class PokedexPanel extends JPanel
 	private PokedexController app;
 	
 	private JButton changeButton;
+	private JButton saveButton;
 	private JComboBox<String> pokedexDropdown;
 	
 	private JTextField healthField;
@@ -43,6 +44,7 @@ public class PokedexPanel extends JPanel
 		this.pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/images/kyogre.png"));
 		
 		changeButton = new JButton("Change");
+		saveButton = new JButton("Save");
 		pokedexDropdown = new JComboBox<String>(); //stub
 		
 		
@@ -199,6 +201,13 @@ public class PokedexPanel extends JPanel
 			{
 				String name = pokedexDropdown.getSelectedItem().toString();
 				changeImageDisplay(name);
+			}
+		});
+		saveButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				app.savePokedex();
 			}
 		});
 	}

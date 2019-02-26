@@ -1,32 +1,25 @@
 package pokemon.model;
 
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+
 public class Kyogre extends Pokemon implements Water
 {
+	private ImageIcon pokemonIcon;
+	
 	public Kyogre()
 	{
 		super(45, "Kyogre");
-		this.setHealthPoints(105);
-		this.setAttackPoints(25);
-		this.setEnhancementModifier(2.0);
-		this.setCanEvolve(false);
 	}
 	
 	public Kyogre(String name)
 	{
 		super(45, name);
-		this.setHealthPoints(105);
-		this.setAttackPoints(25);
-		this.setEnhancementModifier(2.0);
-		this.setCanEvolve(false);
 	}
 	
 	public Kyogre(int num, String name)
 	{
 		super(num, name);
-		this.setHealthPoints(105);
-		this.setAttackPoints(25);
-		this.setEnhancementModifier(2.0);
-		this.setCanEvolve(false);
 	}
 	
 	public String splash()
@@ -37,7 +30,8 @@ public class Kyogre extends Pokemon implements Water
 	
 	public void surf()
 	{
-		System.out.println("Where will Kyogre take you with Surf?");
+		pokemonIcon = new ImageIcon(getClass().getResource("pokemon/view/images/kyogre.png"));
+		JOptionPane.showMessageDialog(null, "", "Where will Kyogre take you with Surf?", JOptionPane.INFORMATION_MESSAGE, pokemonIcon);
 	}
 	
 }

@@ -5,28 +5,16 @@ public class Espurr extends Pokemon implements Psychic
 	public Espurr()
 	{
 		super(114, "Espurr");
-		this.setHealthPoints(60);
-		this.setAttackPoints(15);
-		this.setEnhancementModifier(1.0);
-		this.setCanEvolve(true);
 	}
 	
 	public Espurr(String name)
 	{
 		super(114, name);
-		this.setHealthPoints(60);
-		this.setAttackPoints(15);
-		this.setEnhancementModifier(1.0);
-		this.setCanEvolve(true);
 	}
 	
 	public Espurr(int number, String name)
 	{
 		super(number, name);
-		this.setHealthPoints(60);
-		this.setAttackPoints(15);
-		this.setEnhancementModifier(1.0);
-		this.setCanEvolve(true);
 	}
 	
 	public int zenHeadbutt()
@@ -37,7 +25,7 @@ public class Espurr extends Pokemon implements Psychic
 	
 	public String rest()
 	{
-		String statement = "Espurr rested to restore its HP.";
+		String statement = "Espurr rested to restore its HP. It is breathing in... the cheamicals!";
 		return statement;
 	}
 

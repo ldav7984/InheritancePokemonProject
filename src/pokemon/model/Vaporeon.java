@@ -1,32 +1,24 @@
 package pokemon.model;
 
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+
 public class Vaporeon extends Pokemon implements Water
 {
+	private ImageIcon pokemonIcon;
 	public Vaporeon()
 	{
 		super(134, "Vaporeon");
-		this.setHealthPoints(89);
-		this.setAttackPoints(20);
-		this.setEnhancementModifier(1.0);
-		this.setCanEvolve(false);
 	}
 	
 	public Vaporeon(String name)
 	{
 		super(134, name);
-		this.setHealthPoints(89);
-		this.setAttackPoints(20);
-		this.setEnhancementModifier(1.0);
-		this.setCanEvolve(false);
 	}
 	
 	public Vaporeon(int number, String name)
 	{
 		super(number, name);
-		this.setHealthPoints(89);
-		this.setAttackPoints(20);
-		this.setEnhancementModifier(1.0);
-		this.setCanEvolve(false);
 	}
 	
 	public String splash()
@@ -37,7 +29,8 @@ public class Vaporeon extends Pokemon implements Water
 	
 	public void surf()
 	{
-		System.out.println("Vaporeon is using surf to travel the seas!");
+		pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/images/vaporeon.png"));
+		JOptionPane.showMessageDialog(null, "", "Vaporeon is using surf to travel the seas!", JOptionPane.INFORMATION_MESSAGE, pokemonIcon);
 	}
 	
 }

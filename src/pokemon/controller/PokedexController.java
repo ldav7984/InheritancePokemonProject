@@ -6,17 +6,21 @@ import java.util.ArrayList;
 import pokemon.model.*;
 import pokemon.view.PokedexFrame;
 import pokemon.view.PokedexPanel;
+import javax.swing.ImageIcon;
 
 public class PokedexController 
 {
 	private ArrayList<Pokemon> pokemonList;
 	private PokedexFrame appFrame;
+	private ImageIcon [] icons;
 	
 	public PokedexController()
 	{
 		pokemonList = new ArrayList<Pokemon>();
 		addPokemon();
 		appFrame = new PokedexFrame(this);
+		icons = new ImageIcon[1];
+		icons[0] = new ImageIcon(getClass().getResource("/pokemon/view/images/team mystic.png"));
 	}
 	
 	public void addPokemon()
@@ -26,9 +30,15 @@ public class PokedexController
 		pokemonList.add(new Espurr());
 		pokemonList.add(new Gardevoir());
 		pokemonList.add(new Mimikyu());
+		pokemonList.add(new Nabstablook());
 	}
 
 	public void start()
+	{
+		
+	}
+	
+	public void savePokedex()
 	{
 		
 	}
@@ -37,6 +47,9 @@ public class PokedexController
 	{
 		return pokemonList;
 	}
+	
+	
+	
 	
 	public PokedexFrame getFrame()
 	{

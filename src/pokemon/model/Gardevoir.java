@@ -1,32 +1,25 @@
 package pokemon.model;
 
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+
 public class Gardevoir extends Pokemon implements Psychic, Fairy
 {
+	private ImageIcon pokemonIcon;
+	
 	public Gardevoir()
 	{
 		super(282, "Gardevoir");
-		this.setHealthPoints(95);
-		this.setAttackPoints(18);
-		this.setEnhancementModifier(1.5);
-		this.setCanEvolve(true);
 	}
 	
 	public Gardevoir(String name)
 	{
 		super(282, name);
-		this.setHealthPoints(95);
-		this.setAttackPoints(18);
-		this.setEnhancementModifier(1.5);
-		this.setCanEvolve(true);
 	}
 	
 	public Gardevoir(int number, String name)
 	{
 		super(number, name);
-		this.setHealthPoints(95);
-		this.setAttackPoints(18);
-		this.setEnhancementModifier(1.5);
-		this.setCanEvolve(true);
 	}
 	
 	public int zenHeadbutt()
@@ -49,7 +42,9 @@ public class Gardevoir extends Pokemon implements Psychic, Fairy
 	
 	public void moonBlast()
 	{
-		System.out.println("Gardevoir blasts you with power from the moon.");
+		pokemonIcon = new ImageIcon(getClass().getResource("pokemon/view/images/gardevoir.png"));
+		
+		JOptionPane.showMessageDialog(null, "", "Gardevoir blasts you with power from the moon.",  JOptionPane.INFORMATION_MESSAGE, pokemonIcon);
 	}
 	
 }
