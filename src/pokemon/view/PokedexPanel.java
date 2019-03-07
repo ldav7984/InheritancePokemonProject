@@ -141,6 +141,7 @@ public class PokedexPanel extends JPanel
 		this.add(imageLabel);
 		
 		nameField.setEditable(false);
+		nameField.setEnabled(false);
 		
 		imageLabel.setVerticalTextPosition(JLabel.BOTTOM);
 		imageLabel.setHorizontalTextPosition(JLabel.CENTER);
